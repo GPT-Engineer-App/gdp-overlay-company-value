@@ -19,39 +19,24 @@ const Index = () => {
         <Text fontSize="2xl" mb={4}>
           World GDP & Company Value Over Time
         </Text>
-        <Box width="90%" bg="gray.200" p={2}>
-          <Text>2020</Text>
-          <Flex>
-            <Box width="70%" bg="blue.500" p={2} color="white">
-              GDP: 21.43 Trillion USD
+        {Array.from({ length: 20 }).map((_, index) => {
+          const year = 2024 - index;
+          const gdpWidth = 50 + index * 2;
+          const companyValueWidth = 60 + index * 1.5;
+          return (
+            <Box width="90%" bg="gray.200" p={2} mt={2} key={year}>
+              <Text>{year}</Text>
+              <Flex>
+                <Box width={`${gdpWidth}%`} bg="blue.500" p={2} color="white">
+                  GDP: {20 + index * 0.5} Trillion USD
+                </Box>
+                <Box width={`${companyValueWidth}%`} bg="green.500" p={2} color="white">
+                  Company Value: {30 + index * 0.8} Trillion USD
+                </Box>
+              </Flex>
             </Box>
-            <Box width="80%" bg="green.500" p={2} color="white">
-              Company Value: 32.12 Trillion USD
-            </Box>
-          </Flex>
-        </Box>
-        <Box width="90%" bg="gray.200" p={2} mt={2}>
-          <Text>2021</Text>
-          <Flex>
-            <Box width="72%" bg="blue.500" p={2} color="white">
-              GDP: 22.43 Trillion USD
-            </Box>
-            <Box width="85%" bg="green.500" p={2} color="white">
-              Company Value: 35.12 Trillion USD
-            </Box>
-          </Flex>
-        </Box>
-        <Box width="90%" bg="gray.200" p={2} mt={2}>
-          <Text>2022</Text>
-          <Flex>
-            <Box width="75%" bg="blue.500" p={2} color="white">
-              GDP: 23.50 Trillion USD
-            </Box>
-            <Box width="90%" bg="green.500" p={2} color="white">
-              Company Value: 38.10 Trillion USD
-            </Box>
-          </Flex>
-        </Box>
+          );
+        })}
       </Flex>
 
       <Flex justify="center" mt={10}>
