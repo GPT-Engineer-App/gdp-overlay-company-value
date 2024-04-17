@@ -1,6 +1,10 @@
 // Complete the Index page component for Lonis Hamaili's personal website
-import { Box, Flex, Heading, Table, Tbody, Td, Text, Th, Thead, Tr, Image } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
 import { FaGlobeAmericas } from "react-icons/fa";
+
+const DynamicGraph = () => {
+  return <Text>Dynamic graph content will be here.</Text>;
+};
 
 const Index = () => {
   return (
@@ -15,44 +19,7 @@ const Index = () => {
         </Text>
       </Flex>
 
-      <Flex direction="column" align="center" width="100%">
-        <Text fontSize="2xl" mb={4}>
-          World GDP & Company Value Over Time
-        </Text>
-        <Box width="90%" bg="gray.200" p={2}>
-          <Text>2020</Text>
-          <Flex>
-            <Box width="70%" bg="blue.500" p={2} color="white">
-              GDP: 21.43 Trillion USD
-            </Box>
-            <Box width="80%" bg="green.500" p={2} color="white">
-              Company Value: 32.12 Trillion USD
-            </Box>
-          </Flex>
-        </Box>
-        <Box width="90%" bg="gray.200" p={2} mt={2}>
-          <Text>2021</Text>
-          <Flex>
-            <Box width="72%" bg="blue.500" p={2} color="white">
-              GDP: 22.43 Trillion USD
-            </Box>
-            <Box width="85%" bg="green.500" p={2} color="white">
-              Company Value: 35.12 Trillion USD
-            </Box>
-          </Flex>
-        </Box>
-        <Box width="90%" bg="gray.200" p={2} mt={2}>
-          <Text>2022</Text>
-          <Flex>
-            <Box width="75%" bg="blue.500" p={2} color="white">
-              GDP: 23.50 Trillion USD
-            </Box>
-            <Box width="90%" bg="green.500" p={2} color="white">
-              Company Value: 38.10 Trillion USD
-            </Box>
-          </Flex>
-        </Box>
-      </Flex>
+      <DynamicGraph />
 
       <Flex justify="center" mt={10}>
         <FaGlobeAmericas size="3em" color="#3182CE" />
