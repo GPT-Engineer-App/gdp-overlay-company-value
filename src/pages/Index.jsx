@@ -15,44 +15,44 @@ const Index = () => {
         </Text>
       </Flex>
 
-      <Box overflowX="auto">
-        <Table variant="simple">
-          <Thead>
-            <Tr>
-              <Th>Country</Th>
-              <Th isNumeric>GDP (in trillion USD)</Th>
-              <Th isNumeric>Total Public Company Value (in trillion USD)</Th>
-            </Tr>
-          </Thead>
-          <Tbody>
-            <Tr>
-              <Td>USA</Td>
-              <Td isNumeric>21.43</Td>
-              <Td isNumeric>32.12</Td>
-            </Tr>
-            <Tr>
-              <Td>China</Td>
-              <Td isNumeric>14.34</Td>
-              <Td isNumeric>10.36</Td>
-            </Tr>
-            <Tr>
-              <Td>Japan</Td>
-              <Td isNumeric>5.08</Td>
-              <Td isNumeric>6.15</Td>
-            </Tr>
-            <Tr>
-              <Td>Germany</Td>
-              <Td isNumeric>3.84</Td>
-              <Td isNumeric>2.24</Td>
-            </Tr>
-            <Tr>
-              <Td>India</Td>
-              <Td isNumeric>2.87</Td>
-              <Td isNumeric>2.53</Td>
-            </Tr>
-          </Tbody>
-        </Table>
-      </Box>
+      <Flex direction="column" align="center" width="100%">
+        <Text fontSize="2xl" mb={4}>
+          World GDP & Company Value Over Time
+        </Text>
+        <Box width="90%" bg="gray.200" p={2}>
+          <Text>2020</Text>
+          <Flex>
+            <Box width="70%" bg="blue.500" p={2} color="white">
+              GDP: 21.43 Trillion USD
+            </Box>
+            <Box width="80%" bg="green.500" p={2} color="white">
+              Company Value: 32.12 Trillion USD
+            </Box>
+          </Flex>
+        </Box>
+        <Box width="90%" bg="gray.200" p={2} mt={2}>
+          <Text>2021</Text>
+          <Flex>
+            <Box width="72%" bg="blue.500" p={2} color="white">
+              GDP: 22.43 Trillion USD
+            </Box>
+            <Box width="85%" bg="green.500" p={2} color="white">
+              Company Value: 35.12 Trillion USD
+            </Box>
+          </Flex>
+        </Box>
+        <Box width="90%" bg="gray.200" p={2} mt={2}>
+          <Text>2022</Text>
+          <Flex>
+            <Box width="75%" bg="blue.500" p={2} color="white">
+              GDP: 23.50 Trillion USD
+            </Box>
+            <Box width="90%" bg="green.500" p={2} color="white">
+              Company Value: 38.10 Trillion USD
+            </Box>
+          </Flex>
+        </Box>
+      </Flex>
 
       <Flex justify="center" mt={10}>
         <FaGlobeAmericas size="3em" color="#3182CE" />
